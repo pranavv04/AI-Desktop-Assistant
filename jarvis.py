@@ -94,13 +94,7 @@ if __name__ == '__main__':
          search=takeCommand()
          chromepath = 'C://Program Files (x86)//Google//Chrome//Application//chrome.exe %s'
          webbrowser.get(chromepath).open_new_tab(search+'.com')
-     elif 'open spotify' in query:
-         speak('which song should i play')
-         search=takeCommand()
-         spotifypath = 'C://Users//User//AppData//Roaming//Spotify//spotify.exe %s'
-         webbrowser.get(spotifypath).open_new(search+'song')
-         #spotify.exe= os.listdir(spotifypath)
-        # os.startfile(os.path.join(spotifypath,[0]))
+    
      elif 'search on youtube' in query:
          query = query.replace("search on youtube", "")
          webbrowser.open(f"www.youtube.com/results?search_query={query}")     
@@ -117,9 +111,7 @@ if __name__ == '__main__':
          os.system("shutdown /r /t 5")
      elif "Lock the system" in query:
          os.system("rundll32.exe powrprof.dll,SetSuspendState 0,1,0")    
-     elif "open notepad" in query:
-         npath = "C:\Windows\system32\notepad"
-         os.startfile(npath)
+    
      elif "close notepad" in query:
          os.system("taskkill /f /im notepad.exe")
      elif "open command prompt" in query:
